@@ -1,5 +1,6 @@
 import React from "react";
 import TextInputUtility from "../TextInputUtility.js";
+import SelectInputUtility from "../SelectInputUtility.js";
 
 export default class PersonalInformation extends React.Component {
 	render() {
@@ -9,8 +10,16 @@ export default class PersonalInformation extends React.Component {
 				<form className="form-group">
 					<TextInputUtility label="First Name" name="firstName" />
 					<TextInputUtility label="Last Name" name="lastName" />
-					<TextInputUtility label="Date of Birth" name="DoB" />
-					<TextInputUtility label="Gender" name="gender" />
+					<TextInputUtility
+						label="Date of Birth"
+						name="DoB"
+						type="date"
+					/>
+					<SelectInputUtility
+						label="Gender"
+						name="gender"
+						options={["Male", "Female"]}
+					/>
 				</form>
 			</div>
 		);

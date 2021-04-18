@@ -1,6 +1,6 @@
 import React from "react";
 
-export default class TextInputUtility extends React.Component {
+export default class SelectInputUtility extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -11,13 +11,20 @@ export default class TextInputUtility extends React.Component {
 					<p>{`${this.props.label}:`}</p>
 				</div>
 				<div className="col-md-9">
-					<input
-						type={this.props.type ? this.props.type : "text"}
-						onChange={this.props.handleChange}
+					<select
 						value={this.props.value}
 						name={this.props.name}
+						onChange={this.props.handleChange}
 						className="form-control"
-					/>
+					>
+						{this.props.options.map((option, idx) => {
+							return (
+								<option key={idx} value={option.toLowerCase()}>
+									{option}
+								</option>
+							);
+						})}
+					</select>
 				</div>
 			</div>
 		);
