@@ -7,7 +7,7 @@ export default class TextInputUtility extends React.Component {
 	render() {
 		return (
 			<div className="row flex-column flex-md-row align-items-md-start mb-3">
-				<div className="col-md-3 text-right pr-0">
+				<div className="col-md-3 d-flex justify-content-start justify-content-md-end pr-0">
 					<p>{`${this.props.label}:`}</p>
 				</div>
 
@@ -20,7 +20,9 @@ export default class TextInputUtility extends React.Component {
 						className="form-control"
 					/>
 					{this.props.hasSecondaryTest && (
-						<span>{this.props.secodaryText}</span>
+						<span className="mb-2 d-block">
+							{this.props.secodaryText}
+						</span>
 					)}
 				</div>
 			</div>

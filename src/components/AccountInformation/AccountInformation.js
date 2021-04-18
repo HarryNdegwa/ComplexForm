@@ -14,11 +14,13 @@ export default class AccountInformation extends React.Component {
 						type="email"
 						hasSecondaryTest
 						secodaryText="(Your email will be your username)"
+						handleChange={this.props.handleChange}
 					/>
 					<TextInputUtility
 						label="Re-type Email"
 						name="emailConfirm"
 						type="email"
+						handleChange={this.props.handleChange}
 					/>
 					<TextInputUtility
 						label="Password"
@@ -26,11 +28,13 @@ export default class AccountInformation extends React.Component {
 						type="password"
 						hasSecondaryTest
 						secodaryText="(Min. 8 characters, 1 number, case-sensitive)"
+						handleChange={this.props.handleChange}
 					/>
 					<TextInputUtility
 						label="Re-type Password"
 						name="passwordConfirm"
 						type="password"
+						handleChange={this.props.handleChange}
 					/>
 					<SelectInputUtility
 						label="Security Question"
@@ -42,12 +46,14 @@ export default class AccountInformation extends React.Component {
 							"Where did you first meet your spouse?",
 							"What is your last name?",
 						]}
+						handleChange={this.props.handleChange}
 					/>
 					<TextInputUtility
 						label="Security Answer"
 						name="securityAnswer"
 						hasSecondaryTest
 						secodaryText="(Not case-sensitive)"
+						handleChange={this.props.handleChange}
 					/>
 				</form>
 			</div>
