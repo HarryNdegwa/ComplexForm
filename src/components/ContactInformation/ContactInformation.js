@@ -3,9 +3,6 @@ import TextInputUtility from "../TextInputUtility.js";
 import SelectInputUtility from "../SelectInputUtility.js";
 
 export default class ContactInformation extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		return (
 			<div className="w-100 mt-5">

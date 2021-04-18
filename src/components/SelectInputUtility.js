@@ -1,9 +1,6 @@
 import React from "react";
 
 export default class SelectInputUtility extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 	render() {
 		return (
 			<div className="row flex-column flex-md-row align-items-md-start mb-3">
