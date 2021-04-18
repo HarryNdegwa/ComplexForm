@@ -1,5 +1,6 @@
 import React from "react";
 import TextInputUtility from "../TextInputUtility.js";
+import SelectInputUtility from "../SelectInputUtility.js";
 
 export default class ContactInformation extends React.Component {
 	render() {
@@ -9,7 +10,17 @@ export default class ContactInformation extends React.Component {
 				<form className="form-group">
 					<TextInputUtility label="Address" name="address" />
 					<TextInputUtility label="City" name="city" />
-					<TextInputUtility label="State" name="state" />
+					<SelectInputUtility
+						label="State"
+						name="state"
+						options={[
+							"Choose a state",
+							"Denver",
+							"Nairobi",
+							"Tokyo",
+							"Helsinki",
+						]}
+					/>
 					<TextInputUtility label="Zip Code" name="zipCode" />
 					<TextInputUtility label="Phone" name="sphone" />
 				</form>

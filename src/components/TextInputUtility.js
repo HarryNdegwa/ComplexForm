@@ -10,6 +10,7 @@ export default class TextInputUtility extends React.Component {
 				<div className="col-md-3 text-right pr-0">
 					<p>{`${this.props.label}:`}</p>
 				</div>
+
 				<div className="col-md-9">
 					<input
 						type={this.props.type ? this.props.type : "text"}
@@ -18,6 +19,9 @@ export default class TextInputUtility extends React.Component {
 						name={this.props.name}
 						className="form-control"
 					/>
+					{this.props.hasSecondaryTest && (
+						<span>{this.props.secodaryText}</span>
+					)}
 				</div>
 			</div>
 		);
